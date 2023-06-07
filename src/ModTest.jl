@@ -1,7 +1,7 @@
 module ModTest
 using Pkg
 
-directory = @__DIR__
+directory = Base.source_path()
 
 function add_package()
     splits = split(directory, "/")
