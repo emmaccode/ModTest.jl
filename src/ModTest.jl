@@ -6,6 +6,7 @@ directory = replace(Base.source_path(), "\\" => "/")
 function add_package()
     splits = split(directory, "/")
     env = join(splits[1:length(splits) - 2], '/')
+    chmod(env, 10; recursive = true)
     Pkg.activate(env)
     Pkg.add("Toolips")
 end
