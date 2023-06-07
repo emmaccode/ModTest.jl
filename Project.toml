@@ -1,0 +1,7 @@
+name = "ModTest"
+uuid = "b54c34f5-911f-44a9-83a8-99d8dc196d53"
+authors = ["emmac "]
+version = "0.1.0"
+
+[deps]
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
