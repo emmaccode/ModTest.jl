@@ -1,11 +1,11 @@
 module ModTest
 using Pkg
 
-directory = Base.source_path()
+directory = replace(Base.source_path(), "\\" => "/")
 
 function add_package()
     splits = split(directory, "/")
-    env = join(splits[1:length(splits) - 1], '/')
+    env = join(splits[1:length(splits) - 2], '/')
     Pkg.activate(env)
     Pkg.add("Toolips")
 end
